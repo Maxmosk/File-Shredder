@@ -109,12 +109,14 @@ uint8_t fill_in_file (FILE *file, const uint64_t file_size)
         }
     }
     
+    free (buffer);
+    
     
     return SUCCESS;
 }
 
 
-char *status_description (uint8_t status_code)
+const char *status_description (uint8_t status_code)
 {
     switch (status_code)
     {
@@ -137,7 +139,7 @@ char *status_description (uint8_t status_code)
             return "Memory allocation error";
 
         case ERROR_FWRITE:
-            return "\'fwrite\' function function";
+            return "\'fwrite\' function erroe";
 
         case ERROR_RMFILE:
             return "File removing error";

@@ -1,9 +1,21 @@
+/*!
+    \file
+    
+    \author Maxmosk
+    \brief File with main program for file shredding
+    \version 1.0
+    \date December, 2021
+*/
+
 #define NDEBUG
 #include <assert.h>
 #include <stdio.h>
 #include "filecleaner.h"
 
 
+/*!
+    \brief Function for shredding files from command line
+*/
 int main (int argc, char *argv[])
 {
     assert (argc == 2);
